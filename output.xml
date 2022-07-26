@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.5 on win32)" generated="20220726 10:44:34.239" rpa="false" schemaversion="3">
+<suite id="s1" name="ERM track time" source="F:\Python\test_cases\ERM_track_time.robot">
+<test id="s1-t1" name="Track Time" line="14">
+<kw name="Open Browser and Maximize" library="resources">
+<arg>${URL}</arg>
+<arg>${Browser}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${UserURL}</arg>
+<arg>${BrowserName}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220726 10:44:34.436" level="INFO">Opening browser 'Chrome' to base url 'https://erm.aristeksystems.com/my/page'.</msg>
+<msg timestamp="20220726 10:44:34.448" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220726 10:44:34.449" level="FAIL">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</msg>
+<status status="FAIL" starttime="20220726 10:44:34.435" endtime="20220726 10:44:34.452"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20220726 10:44:34.452" endtime="20220726 10:44:34.452"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Starting test with ${BrowserName}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220726 10:44:34.452" endtime="20220726 10:44:34.452"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test URL: ${UserURL}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="NOT RUN" starttime="20220726 10:44:34.452" endtime="20220726 10:44:34.452"/>
+</kw>
+<status status="FAIL" starttime="20220726 10:44:34.435" endtime="20220726 10:44:34.453"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:username</arg>
+<arg>pkazakevich</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220726 10:44:34.453" endtime="20220726 10:44:34.453"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>8EdByGaTM4</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220726 10:44:34.454" endtime="20220726 10:44:34.454"/>
+</kw>
+<status status="FAIL" starttime="20220726 10:44:34.434" endtime="20220726 10:44:34.454">WebDriverException: Message: 'chromedriver' executable needs to be in PATH. Please see https://chromedriver.chromium.org/home
+</status>
+</test>
+<status status="FAIL" starttime="20220726 10:44:34.240" endtime="20220726 10:44:34.455"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="ERM track time">ERM track time</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
