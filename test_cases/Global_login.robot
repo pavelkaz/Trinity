@@ -1,4 +1,4 @@
-#  robot -d -t test_cases/Global_login.robot
+#  robot test_cases/Global_login.robot
 
 *** Settings ***
 Library    SeleniumLibrary
@@ -12,9 +12,9 @@ ${Browser}    Chrome
 
 General Check Global Login links
     Open Browser and Maximize    ${URL}    ${Browser}
-#    Click about us
-#    Click STEMscopes Products
-#    Click STEM Professional Learning
+    Click about us
+    Click STEMscopes Products
+    Click STEM Professional Learning
     Click Resources
     [Teardown]    close browser
 
@@ -81,12 +81,20 @@ Click Resources
     Check links Resources   Resources    News    https://stemscopes.com/news.php
     Check links Resources   Resources    Free Resources    https://stemscopes.com/science/#resources
     Check links Resources   Resources    Testimonials    https://stemscopes.com/testimonials
-    Check links Resources   Resources    Awards    https://stemscopes.com/#awards
+    Check links Resources awards    Resources    Awards    https://stemscopes.com/#awards
 
 Check links Resources
     [Arguments]    ${section}    ${element}    ${link}
     Click Element    //*[text()='${section}']
     Wait Until Element Is Visible    //*[text()='${element}']    15s
     Click Element    //*[text()='${element}']
+    location should be    ${link}
+    go back
+
+Check links Resources awards
+       [Arguments]    ${section}    ${element}    ${link}
+    Click Element    //*[text()='${section}']
+    Wait Until Element Is Visible    (//*[text()='${element}'])[2]    15s
+    Click Element    (//*[text()='${element}'])[2]
     location should be    ${link}
     go back
